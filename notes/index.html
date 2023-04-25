@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Text Save</title>
+	<title>Notes</title>
 	<style type="text/css">
 		html, body {
 			margin:0;
@@ -15,7 +15,7 @@
 			height:100%;
 			border:none;
 			outline:none;
-			font-family:monospace;
+			font-family:var(fontChoice);
 			font-size:16px;
 			padding:50px;
 			box-sizing:border-box;
@@ -57,6 +57,12 @@
 		window.addEventListener('storage', function(e) {
 		  input.value = localStorage.getItem('savedText');
 		});
+
+		var fontChoice = document.getElementById("font").value
 	</script>
+	<select name="Font" id="font">
+		<option value="Cursive">Cursive</option>
+		<option value="Nourrier New">Default</option>
+	</select>
 </body>
 </html>
