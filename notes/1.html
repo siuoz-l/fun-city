@@ -28,12 +28,12 @@
 		var input = document.getElementById("textBox");
 		window.onload = function() {
 		  input.focus();
-		  input.value = localStorage.getItem('savedText');
+		  input.value = localStorage.getItem('savedTextPG1');
 		};
 
 		function saveToStorage() {
 		  console.log('saving')
-		  localStorage.setItem('savedText', input.value);
+		  localStorage.setItem('savedTextPG1', input.value);
 		}
 
 		input.addEventListener('keyup', saveToStorage);
@@ -55,7 +55,7 @@
 		})
 
 		window.addEventListener('storage', function(e) {
-		  input.value = localStorage.getItem('savedText');
+		  input.value = localStorage.getItem('savedTextPG1');
 		});
 
 	</script>
