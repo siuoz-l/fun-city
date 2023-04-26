@@ -41,15 +41,15 @@
 		  input.value = localStorage.getItem('savedTitlePG1');
 		};
 
-		function saveToStorage() {
+		function saveTitleToStorage() {
 		  console.log('saving')
 		  localStorage.setItem('savedTitlePG1', input.value);
 		}
 
-		input.addEventListener('keyup', saveToStorage);
-		input.addEventListener('onchange', saveToStorage);
-		input.addEventListener('keydown', function(e) {
-		  if (e.which === 9) {
+		input.addEventListener('keyup', saveTitleToStorage);
+		input.addEventListener('onchange', saveTitleToStorage);
+		input.addEventListener('keydown', function(eTitle) {
+		  if (eTitle.which === 9) {
 		    var start = this.selectionStart;
 		    var end = this.selectionEnd;
 
@@ -60,11 +60,11 @@
 				+ input.value.substring(end);
 
 		    this.selectionStart = this.selectionEnd = start + tabString.length;
-		    e.preventDefault();
+		    eTitle.preventDefault();
 		  }
 		})
 
-		window.addEventListener('storage', function(e) {
+		window.addEventListener('storage', function(eTitle) {
 		  input.value = localStorage.getItem('savedTitlePG1');
 		});
 
