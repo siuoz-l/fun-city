@@ -35,6 +35,7 @@
         <p id="userName"></p>
         <script>
             var userName = localStorage.getItem("Siuozl_ProfileNAME");
+				document.getElementById("userName").innerText = (userName);
         </script>
 		<style>
 			#userName {
@@ -52,7 +53,6 @@
 		window.onload = function() {
 		  input.focus();
 		  input.value = localStorage.getItem('savedTitlePG1');
-		  document.getElementById("userName").innerText = (userName);
 		};
 
 		function saveTitleToStorage() {
