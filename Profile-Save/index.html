@@ -14,8 +14,8 @@
 	<textarea id="nameBox">Unnamed_User</textarea>
 	<script type="text/javascript">
 		function save() {
-			localStorage.setItem('Siuozl_ProfileLOGO', document.getElementById("img").value);
-			document.getElementById("ShownIMG").src = document.getElementsById("img").value;
+			localStorage.setItem('Siuozl_ProfileLOGO', document.getElementById("img").src);
+			document.getElementById("ShownIMG").src = document.getElementsById("img").src;
 		};
 
 		var input = document.getElementById("nameBox");
