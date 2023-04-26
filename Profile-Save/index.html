@@ -9,12 +9,12 @@
 <body>
     <h2>Modify your account.</h2>
 	<button onclick="save()">Save</button>
-    <input id="img" type="image">
+    <input id="img" type="file" name="Upload an image">
 	<img id="ShownIMG" src="" alt="Profile Picture">
 	<textarea id="nameBox">Unnamed_User</textarea>
 	<script type="text/javascript">
 		function save() {
-			localStorage.setItem('Siuozl_ProfileLOGO', document.getElementById("img").result)
+			localStorage.setItem('Siuozl_ProfileLOGO', document.getElementById("img").value)
 			document.getElementById("ShownIMG")
 		}
 
