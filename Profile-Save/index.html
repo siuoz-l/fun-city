@@ -22,7 +22,7 @@
 		window.onload = function() {
 		  input.focus();
 		  input.value = localStorage.getItem('Siuozl_ProfileNAME');
-		  document.getElementById('ShownIMG').value = localStorage.getItem('Siuozl_ProfileLOGO')
+		  document.getElementById('ShownIMG').src = localStorage.getItem('Siuozl_ProfileLOGO')
 		};
 
 		function saveToStorage() {
