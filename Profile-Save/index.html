@@ -10,11 +10,12 @@
     <h2>Modify your account.</h2>
 	<button onclick="save()">Save</button>
     <input id="img" type="image">
-	<img src="" alt="Profile Picture">
+	<img id="ShownIMG" src="" alt="Profile Picture">
 	<textarea id="nameBox">Unnamed_User</textarea>
 	<script type="text/javascript">
 		function save() {
 			localStorage.setItem('Siuozl_ProfileLOGO', document.getElementById("img").result)
+			document.getElementById("ShownIMG")
 		}
 
 		var input = document.getElementById("nameBox");
