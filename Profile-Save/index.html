@@ -15,7 +15,7 @@
 	<script type="text/javascript">
 		function save() {
 			localStorage.setItem('Siuozl_ProfileLOGO', document.getElementById("img").src);
-			document.getElementById("ShownIMG").src = document.getElementsById("img").src;
+			document.getElementById("ShownIMG").src = localStorage.getItem('Siuozl_ProfileLOGO');
 		};
 
 		var input = document.getElementById("nameBox");
