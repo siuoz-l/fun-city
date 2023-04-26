@@ -8,6 +8,21 @@
 </head>
 <body>
     <a href="1.html">Go to first page</a>
-    <div src="profileDIV.html"></div>
+    <div>
+        <p id="userName">404 - UNCOMPATIBLE</p>
+<script>
+    var userName = localStorage.getItem("Siuozl_ProfileNAME");
+    window.onload = function() {
+        document.getElementById("userName").innerText = (userName)
+    }
+</script>
+<style>
+    #userName {
+        float: right;
+        font-family: fantasy;
+        font-size: x-small;
+    }
+</style>
+    </div>
 </body>
 </html>
