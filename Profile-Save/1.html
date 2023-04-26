@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile</title>
+</head>
+<body>
+    <h2>Account.</h2>
+    <textarea id="nameBox">Unnamed_User</textarea>
+	<script type="text/javascript">
+		var input = document.getElementById("nameBox");
+		window.onload = function() {
+		  input.focus();
+		  input.value = localStorage.getItem('Siuozl_ProfileNAME');
+		};
+
+		function saveToStorage() {
+		  console.log('saving')
+		  localStorage.setItem('Siuozl_ProfileNAME', input.value);
+		}
+
+		input.addEventListener('keyup', saveToStorage);
+		input.addEventListener('onchange', saveToStorage);
+		input.addEventListener('keydown', function(e) {
+		  if (e.which === 9) {
+		    var start = this.selectionStart;
+		    var end = this.selectionEnd;
+
+		    const tabString = '    ';
+
+		    input.value = input.value.substring(0, start)
+				+ tabString
+				+ input.value.substring(end);
+
+		    this.selectionStart = this.selectionEnd = start + tabString.length;
+		    e.preventDefault();
+		  }
+		})
+
+		window.addEventListener('storage', function(e) {
+		  input.value = localStorage.getItem('Siuozl_ProfileNAME');
+		});
+    </script>
+</body>
+</html>
