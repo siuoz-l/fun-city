@@ -12,7 +12,17 @@
 		}
 		#textBox {
 			width:100%;
-			height:100%;
+			height:10%;
+			border:none;
+			outline:none;
+			font-family:serif;
+			font-size:20px;
+			padding:50px;
+			box-sizing:border-box;
+		}
+		#titleBox {
+			width:100%;
+			height:90%;
 			border:none;
 			outline:none;
 			font-family:serif;
@@ -23,18 +33,17 @@
 	</style>
 </head>
 <body>
-	<a href="2.html">Next page</a>
-	<textarea id="textBox"></textarea>
+	<textarea id="titleBox"></textarea>
 	<script type="text/javascript">
-		var input = document.getElementById("textBox");
+		var input = document.getElementById("titleBox");
 		window.onload = function() {
 		  input.focus();
-		  input.value = localStorage.getItem('savedTextPG1');
+		  input.value = localStorage.getItem('savedTitlePG1');
 		};
 
 		function saveToStorage() {
 		  console.log('saving')
-		  localStorage.setItem('savedTextPG1', input.value);
+		  localStorage.setItem('savedTitlePG1', input.value);
 		}
 
 		input.addEventListener('keyup', saveToStorage);
@@ -56,7 +65,7 @@
 		})
 
 		window.addEventListener('storage', function(e) {
-		  input.value = localStorage.getItem('savedTextPG1');
+		  input.value = localStorage.getItem('savedTitlePG1');
 		});
 
 	</script>
