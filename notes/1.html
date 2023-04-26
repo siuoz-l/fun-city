@@ -35,10 +35,17 @@
         <p id="userName">404 - UNCOMPATIBLE</p>
         <script>
             var userName = localStorage.getItem("Siuozl_ProfileNAME");
-            window.onload = function() {
+            window.onload = function(username) {
                 document.getElementById("userName").innerText = (userName)
             }
         </script>
+		<style>
+			#userName {
+				float: right;
+				font-family: fantasy;
+				font-size: x-small;
+			}
+		</style>
     </div>
 </head>
 <body>
