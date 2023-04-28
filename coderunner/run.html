@@ -8,12 +8,15 @@
     <script>
         function runCode() {
             document.getElementById("ShownPage").innerHTML = document.getElementById("input").value;
-        }
+        };
+        onkeyup, function() {
+            document.getElementById("ShownPage").innerHTML = document.getElementById("input").value;
+        };
     </script>
 </head>
 <body>
-    <h3>Type or paste you code down below...</h3>
-    <button onclick="runCode()">Run HTML</button>
+    <h3>Type or paste your code down below...</h3>
+    <button onclick="runCode()">Run HTML</button> <br>
     <textarea name="Type or paste..." id="input" cols="30" rows="10"></textarea>
     <div id="ShownPage"></div>
 </body>
