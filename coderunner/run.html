@@ -23,9 +23,7 @@
         function runCode() {
             document.getElementById("ShownPage").innerHTML = document.getElementById("input").value;
         };
-        onkeyup, function() {
-            document.getElementById("ShownPage").innerHTML = document.getElementById("input").value;
-        };
+        document.addEventListener('keyup', runCode());
     </script>
 </head>
 <body>
