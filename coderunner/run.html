@@ -21,7 +21,8 @@
     </style>
     <script>
         function runCode() {
-            document.getElementById("ShownPage").innerHTML = document.getElementById("input").value;
+            localStorage.setItem("SiuozlWebsiteMaker").value = document.getElementById("input").value;
+            document.getElementById("ShownPage").innerHTML = localStorage.getItem("SiuozlWebsiteMaker")
         };
         addEventListener('keyup', runCode());
     </script>
