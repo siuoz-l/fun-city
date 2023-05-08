@@ -1,3 +1,4 @@
+document.getElementById("SIUOZL_12100_header").innerHTML = localStorage.getItem("SIUOZL_12100_header");
 window.onload = function SIUOZL_LOAD(){
-    document.getElementById("SIUOZL_12100_header").innerHTML = localStorage.getItem("SIUOZL_12100_header")
-}
+    document.getElementById("SIUOZL_12100_header").innerHTML = localStorage.getItem("SIUOZL_12100_header");
+;}
