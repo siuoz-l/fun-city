@@ -20,13 +20,8 @@
         }
     </style>
     <script>
-        window.onload{
-            document.getElementById("SiuozlWebsiteMaker").innerHTML = localStorage.getItem("SiuozlWebsiteMaker");
-        };
         function runCode() {
-            localStorage.setItem("SiuozlWebsiteMaker", document.getElementById("input").value);
-            document.getElementById("ShownPage").innerHTML = localStorage.getItem("SiuozlWebsiteMaker");
-            document.getElementById("ShownPage").innerHTML = document.getElementById("input")
+            document.getElementById("ShownPage").innerHTML = document.getElementById("input").value;
         };
         addEventListener('keyup', runCode());
     </script>
